@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Award, Users, Calendar, Shield, Heart, Target } from 'lucide-react';
+import kitPinkertonImage from '../Kit Pinkerton.jpeg';
 
 const AboutPage = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -93,22 +94,22 @@ const AboutPage = () => {
 
   const teamMembers = [
     {
-      name: "John Pinkerton",
+      name: "Kit Pinkerton",
       role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-      description: "With over 25 years in construction, John founded Pinkerton Construction with a vision of honest, quality work."
+      image: kitPinkertonImage,
+      description: "With over 25 years in construction, Kit founded Pinkerton Construction with a vision of honest, quality work."
     },
     {
       name: "Sarah Pinkerton",
       role: "Project Manager",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=300&h=300&fit=crop&crop=face",
+      image: "https://randomuser.me/api/portraits/women/50.jpg",
       description: "Sarah oversees all projects ensuring they meet our quality standards and are completed on time and budget."
     },
     {
-      name: "Mike Rodriguez",
+      name: "Marcus Jackson",
       role: "Lead Foreman",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
-      description: "Mike brings 20 years of hands-on construction experience and leads our skilled craftsman team."
+      image: "https://randomuser.me/api/portraits/men/54.jpg",
+      description: "Marcus brings 20 years of hands-on construction experience and leads our skilled craftsman team."
     }
   ];
 
@@ -143,7 +144,7 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-6 text-[16px] font-semibold font-mona text-gray-600 leading-relaxed">
                 <p>
-                  Pinkerton Construction was founded in 1998 by John Pinkerton,
+                  Pinkerton Construction was founded in 1998 by Kit Pinkerton,
                   a third-generation contractor who learned the trade from his
                   father and grandfather. What started as a small family
                   business has grown into one of the most trusted construction

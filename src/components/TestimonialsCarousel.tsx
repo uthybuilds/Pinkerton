@@ -28,8 +28,7 @@ const TestimonialsCarousel = () => {
       location: "Austin, TX",
       rating: 5,
       text: "Pinkerton Construction completely transformed our kitchen! The team was professional, on time, and the quality of work exceeded our expectations. We couldn't be happier with the results.",
-      avatar:
-        "https://plus.unsplash.com/premium_photo-1677185667207-f02691530e74?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2xkJTIwbGFkeXxlbnwwfHwwfHx8MA%3D%3D",
+      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
       project: "Kitchen Renovation",
     },
     {
@@ -38,8 +37,7 @@ const TestimonialsCarousel = () => {
       location: "Dallas, TX",
       rating: 5,
       text: "From start to finish, the team at Pinkerton Construction was amazing. They built our dream home addition and handled everything with such attention to detail. Highly recommend!",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
       project: "Home Addition",
     },
     {
@@ -48,8 +46,7 @@ const TestimonialsCarousel = () => {
       location: "Houston, TX",
       rating: 5,
       text: "Outstanding work on our bathroom remodel! The crew was clean, respectful, and delivered exactly what we envisioned. The project was completed on time and within budget.",
-      avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://randomuser.me/api/portraits/women/63.jpg",
       project: "Bathroom Remodeling",
     },
     {
@@ -58,8 +55,7 @@ const TestimonialsCarousel = () => {
       location: "San Antonio, TX",
       rating: 5,
       text: "Pinkerton Construction handled our office renovation perfectly. Professional, reliable, and the final result looks incredible. Our employees love the new space!",
-      avatar:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://randomuser.me/api/portraits/men/71.jpg",
       project: "Commercial Renovation",
     },
     {
@@ -68,8 +64,7 @@ const TestimonialsCarousel = () => {
       location: "Fort Worth, TX",
       rating: 5,
       text: "The roof replacement was done flawlessly. Great communication throughout the process and the cleanup was thorough. These guys really know their stuff!",
-      avatar:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+      avatar: "https://randomuser.me/api/portraits/women/42.jpg",
       project: "Roof Replacement",
     },
   ];
@@ -89,14 +84,14 @@ const TestimonialsCarousel = () => {
           start: "top 80%",
           toggleActions: "play none none reverse",
         },
-      }
+      },
     );
 
     // First testimonial fade-in
     gsap.fromTo(
       carouselRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 0.6, ease: "power2.out", delay: 0.3 }
+      { opacity: 1, duration: 0.6, ease: "power2.out", delay: 0.3 },
     );
   }, []);
 
@@ -127,7 +122,7 @@ const TestimonialsCarousel = () => {
           gsap.fromTo(
             carouselRef.current,
             { x: index > currentIndex ? 100 : -100, opacity: 0 },
-            { x: 0, opacity: 1, duration: 0.4, ease: "power2.out" }
+            { x: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
           );
         },
       });

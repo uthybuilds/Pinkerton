@@ -36,7 +36,7 @@ const Navigation = () => {
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
-    // Hamburger to X animation (kept as-is)
+  
     if (hamburgerRef.current) {
       const lines = hamburgerRef.current.querySelectorAll("svg");
       lines.forEach((line) => {
@@ -48,7 +48,7 @@ const Navigation = () => {
       });
     }
 
-    // Mobile menu slide animation
+  
     if (mobileMenuRef.current) {
       gsap.fromTo(
         mobileMenuRef.current,
