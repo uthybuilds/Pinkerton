@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Award, Users, Calendar, Shield, Heart, Target } from 'lucide-react';
-import kitPinkertonImage from '../Kit Pinkerton.jpeg';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import { Award, Users, Calendar, Shield, Heart, Target } from "lucide-react";
+import kitPinkertonImage from "../Kit Pinkerton.jpeg";
 
 const AboutPage = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -14,19 +14,21 @@ const AboutPage = () => {
 
   useEffect(() => {
     // Hero section animation
-    gsap.fromTo(heroRef.current,
+    gsap.fromTo(
+      heroRef.current,
       { y: 30, opacity: 0 },
       {
         y: 0,
         opacity: 1,
         duration: 1,
         ease: "power2.out",
-        delay: 0.5
-      }
+        delay: 0.5,
+      },
     );
 
     // Story section animation
-    gsap.fromTo(storyRef.current,
+    gsap.fromTo(
+      storyRef.current,
       { x: -50, opacity: 0 },
       {
         x: 0,
@@ -36,13 +38,14 @@ const AboutPage = () => {
         scrollTrigger: {
           trigger: storyRef.current,
           start: "top 80%",
-          toggleActions: "play none none reverse"
-        }
-      }
+          toggleActions: "play none none reverse",
+        },
+      },
     );
 
     // Values section animation
-    gsap.fromTo(valuesRef.current?.children || [],
+    gsap.fromTo(
+      valuesRef.current?.children || [],
       { y: 50, opacity: 0 },
       {
         y: 0,
@@ -53,9 +56,9 @@ const AboutPage = () => {
         scrollTrigger: {
           trigger: valuesRef.current,
           start: "top 70%",
-          toggleActions: "play none none reverse"
-        }
-      }
+          toggleActions: "play none none reverse",
+        },
+      },
     );
   }, []);
 
@@ -63,33 +66,39 @@ const AboutPage = () => {
     {
       icon: <Heart className="h-8 w-8" />,
       title: "Family Values",
-      description: "As a family-owned business, we treat every client like family and every project like it's our own home."
+      description:
+        "As a family-owned business, we treat every client like family and every project like it's our own home.",
     },
     {
       icon: <Shield className="h-8 w-8" />,
       title: "Quality First",
-      description: "We never compromise on quality. Every project meets our high standards before we consider it complete."
+      description:
+        "We never compromise on quality. Every project meets our high standards before we consider it complete.",
     },
     {
       icon: <Target className="h-8 w-8" />,
       title: "Precision",
-      description: "Attention to detail and precision in every aspect of construction is what sets us apart from competitors."
+      description:
+        "Attention to detail and precision in every aspect of construction is what sets us apart from competitors.",
     },
     {
       icon: <Award className="h-8 w-8" />,
       title: "Excellence",
-      description: "We strive for excellence in everything we do, from initial consultation to final walkthrough."
+      description:
+        "We strive for excellence in everything we do, from initial consultation to final walkthrough.",
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: "Teamwork",
-      description: "Our experienced team works together seamlessly to deliver exceptional results on every project."
+      description:
+        "Our experienced team works together seamlessly to deliver exceptional results on every project.",
     },
     {
       icon: <Calendar className="h-8 w-8" />,
       title: "Reliability",
-      description: "We show up on time, stick to deadlines, and keep our promises. Your project matters to us."
-    }
+      description:
+        "We show up on time, stick to deadlines, and keep our promises. Your project matters to us.",
+    },
   ];
 
   const teamMembers = [
@@ -97,20 +106,23 @@ const AboutPage = () => {
       name: "Kit Pinkerton",
       role: "Founder & CEO",
       image: kitPinkertonImage,
-      description: "With over 25 years in construction, Kit founded Pinkerton Construction with a vision of honest, quality work."
+      description:
+        "With over 25 years in construction, Kit founded Pinkerton Construction with a vision of honest, quality work.",
     },
     {
       name: "Sarah Pinkerton",
       role: "Project Manager",
       image: "https://randomuser.me/api/portraits/women/50.jpg",
-      description: "Sarah oversees all projects ensuring they meet our quality standards and are completed on time and budget."
+      description:
+        "Sarah oversees all projects ensuring they meet our quality standards and are completed on time and budget.",
     },
     {
       name: "Marcus Jackson",
       role: "Lead Foreman",
       image: "https://randomuser.me/api/portraits/men/54.jpg",
-      description: "Marcus brings 20 years of hands-on construction experience and leads our skilled craftsman team."
-    }
+      description:
+        "Marcus brings 20 years of hands-on construction experience and leads our skilled craftsman team.",
+    },
   ];
 
   return (
@@ -144,8 +156,8 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-6 text-[16px] font-semibold font-mona text-gray-600 leading-relaxed">
                 <p>
-                  Pinkerton Construction was founded in 1998 by Kit Pinkerton,
-                  a third-generation contractor who learned the trade from his
+                  Pinkerton Construction was founded in 1998 by Kit Pinkerton, a
+                  third-generation contractor who learned the trade from his
                   father and grandfather. What started as a small family
                   business has grown into one of the most trusted construction
                   companies in Texas, while maintaining our commitment to family
@@ -253,7 +265,6 @@ const AboutPage = () => {
                     alt={member.name}
                     className="w-32 h-32 rounded-full mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300"
                   />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-blue-600/20 to-transparent group-hover:from-blue-600/30 transition-all duration-300"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {member.name}
