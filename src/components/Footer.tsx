@@ -198,7 +198,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-yellow-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    1821 South Dumas Avenue,
+                    834 N Dumas Ave,
                     <br />
                     Dumas, Texas 79029
                   </p>

@@ -118,7 +118,7 @@ const ContactForm = () => {
               <div>
                 <h4 className="font-semibold text-yellow-400 mb-2">Address</h4>
                 <p>
-                  1821 South Dumas Avenue
+                  834 N Dumas Ave
                   <br />
                   Dumas, Texas 79029
                 </p>
