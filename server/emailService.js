@@ -64,8 +64,8 @@ export const sendContactEmail = async (contactData) => {
 
     // Business email (to you)
     const businessEmail = {
-      from: process.env.EMAIL_FROM || "noreply@pinkertonconstruction.com",
-      to: process.env.BUSINESS_EMAIL || "info@pinkertonconstruction.com",
+      from: process.env.EMAIL_FROM || "noreply@pinkertonconstruction.org",
+      to: process.env.BUSINESS_EMAIL || "info@pinkertonconstruction.org",
       subject: `🏗️ New Contact Form Submission - ${projectType}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
@@ -176,7 +176,7 @@ export const sendContactEmail = async (contactData) => {
 
     // Auto-reply email to customer (full expanded HTML)
     const customerEmail = {
-      from: process.env.EMAIL_FROM || "info@pinkertonconstruction.com",
+      from: process.env.EMAIL_FROM || "info@pinkertonconstruction.org",
       to: email,
       subject: "🏗️ Thank you for contacting Pinkerton Construction!",
       html: `
@@ -249,7 +249,7 @@ export const sendContactEmail = async (contactData) => {
                 Available Mon-Fri 7AM-6PM, Sat 8AM-4PM
               </p>
               <p style="margin: 15px 0 0 0; font-size: 14px;">
-                ✉️ info@pinkertonconstruction.com
+                ✉️ info@pinkertonconstruction.org
               </p>
             </div>
 
